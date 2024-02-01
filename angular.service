@@ -1,0 +1,14 @@
+# /etc/systemd/system/angular.service
+
+[Unit]
+Description= ui and backend
+Requires=docker.service
+
+[Service]
+Type=simple
+ExecStart=/home/c/tanisha/First/run_angular.sh
+Restart=on-failure
+#PIDFile=/var/run/hexwave-backend.pid
+
+[Install]
+WantedBy=multi-user.target
